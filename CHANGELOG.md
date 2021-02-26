@@ -4,6 +4,60 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v9.0.0](https://github.com/voxpupuli/puppet-zabbix/tree/v9.0.0) (2021-02-26)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-zabbix/compare/v8.0.0...v9.0.0)
+
+**Breaking changes:**
+
+- Drop CentOS 6 testing/support [\#733](https://github.com/voxpupuli/puppet-zabbix/pull/733) ([bastelfreak](https://github.com/bastelfreak))
+- Bump zabbixapi version to 4.2.0 [\#730](https://github.com/voxpupuli/puppet-zabbix/pull/730) ([fraenki](https://github.com/fraenki))
+- Drop Debian 8 / Add Debian 9 support [\#666](https://github.com/voxpupuli/puppet-zabbix/pull/666) ([bastelfreak](https://github.com/bastelfreak))
+
+**Implemented enhancements:**
+
+- Zabbix 4.2 Support [\#621](https://github.com/voxpupuli/puppet-zabbix/issues/621)
+- Add option to specify type of interface in agent class [\#697](https://github.com/voxpupuli/puppet-zabbix/pull/697) ([zv0n](https://github.com/zv0n))
+- Add better postgres support [\#695](https://github.com/voxpupuli/puppet-zabbix/pull/695) ([anthonysomerset](https://github.com/anthonysomerset))
+- Fix for zabbix::agent manage\_firewall when multiple servers are specified [\#690](https://github.com/voxpupuli/puppet-zabbix/pull/690) ([xandm](https://github.com/xandm))
+- Improve `zabbix_proxy` type [\#679](https://github.com/voxpupuli/puppet-zabbix/pull/679) ([alexjfisher](https://github.com/alexjfisher))
+- Add zabbix-agent support on windows [\#675](https://github.com/voxpupuli/puppet-zabbix/pull/675) ([bastelfreak](https://github.com/bastelfreak))
+- Add Debian 10 support [\#674](https://github.com/voxpupuli/puppet-zabbix/pull/674) ([bastelfreak](https://github.com/bastelfreak))
+- Add support for defining host's macros [\#671](https://github.com/voxpupuli/puppet-zabbix/pull/671) ([zv0n](https://github.com/zv0n))
+- Support for zabbix::agent on AIX [\#665](https://github.com/voxpupuli/puppet-zabbix/pull/665) ([bjschafer](https://github.com/bjschafer))
+- Add support for HostInterface and HostInterfaceItem \(4.4 Enhancement\) [\#656](https://github.com/voxpupuli/puppet-zabbix/pull/656) ([mergwyn](https://github.com/mergwyn))
+
+**Fixed bugs:**
+
+- issue with firewall when two servers defined [\#199](https://github.com/voxpupuli/puppet-zabbix/issues/199)
+- Cleanup and fix acceptance test helper [\#682](https://github.com/voxpupuli/puppet-zabbix/pull/682) ([bastelfreak](https://github.com/bastelfreak))
+- modulesync 2.12.0 / zabbix::web: Allow httpd to speak to the database [\#680](https://github.com/voxpupuli/puppet-zabbix/pull/680) ([bastelfreak](https://github.com/bastelfreak))
+- Fix zabbix::proxy idempotency [\#669](https://github.com/voxpupuli/puppet-zabbix/pull/669) ([alexjfisher](https://github.com/alexjfisher))
+- Fix type error on zabbix\_proxy delete [\#663](https://github.com/voxpupuli/puppet-zabbix/pull/663) ([baurmatt](https://github.com/baurmatt))
+
+**Closed issues:**
+
+- Add Support for Zabbix 5.0 [\#689](https://github.com/voxpupuli/puppet-zabbix/issues/689)
+- zabbix::repo should be in setup stage [\#661](https://github.com/voxpupuli/puppet-zabbix/issues/661)
+- Remove dependency on concat [\#658](https://github.com/voxpupuli/puppet-zabbix/issues/658)
+- server\_logtype should be optional [\#655](https://github.com/voxpupuli/puppet-zabbix/issues/655)
+- API Error [\#544](https://github.com/voxpupuli/puppet-zabbix/issues/544)
+- AIX Support [\#504](https://github.com/voxpupuli/puppet-zabbix/issues/504)
+
+**Merged pull requests:**
+
+- Fix typo in README.md [\#727](https://github.com/voxpupuli/puppet-zabbix/pull/727) ([0none](https://github.com/0none))
+- Add parameter and default for Option SocketDir [\#723](https://github.com/voxpupuli/puppet-zabbix/pull/723) ([wdberry](https://github.com/wdberry))
+- Reduce configuration on agent service [\#711](https://github.com/voxpupuli/puppet-zabbix/pull/711) ([ekohl](https://github.com/ekohl))
+- \[ci skip\] document acceptance test helper method [\#710](https://github.com/voxpupuli/puppet-zabbix/pull/710) ([bastelfreak](https://github.com/bastelfreak))
+- modulesync 3.0.0 & puppet-lint fixes & rubocop fixes [\#699](https://github.com/voxpupuli/puppet-zabbix/pull/699) ([bastelfreak](https://github.com/bastelfreak))
+- Drop ruby \< 2.3 fakefs gem dependency [\#688](https://github.com/voxpupuli/puppet-zabbix/pull/688) ([ekohl](https://github.com/ekohl))
+- Change database collation to utf8\_bin as it is stated in official docs [\#685](https://github.com/voxpupuli/puppet-zabbix/pull/685) ([KrzysztofHajdamowicz](https://github.com/KrzysztofHajdamowicz))
+- Improve agent version handling in acceptance [\#676](https://github.com/voxpupuli/puppet-zabbix/pull/676) ([ekohl](https://github.com/ekohl))
+- Use older xenial docker image [\#673](https://github.com/voxpupuli/puppet-zabbix/pull/673) ([alexjfisher](https://github.com/alexjfisher))
+- Add acceptance testing for 4.2 and 4.4 [\#664](https://github.com/voxpupuli/puppet-zabbix/pull/664) ([baurmatt](https://github.com/baurmatt))
+- Remove concat dependency from metadata.json [\#659](https://github.com/voxpupuli/puppet-zabbix/pull/659) ([alexjfisher](https://github.com/alexjfisher))
+
 ## [v8.0.0](https://github.com/voxpupuli/puppet-zabbix/tree/v8.0.0) (2020-02-01)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-zabbix/compare/v7.0.0...v8.0.0)
@@ -617,7 +671,11 @@ These should not affect the functionality of the module.
 - Add archlinux support [\#201](https://github.com/voxpupuli/puppet-zabbix/pull/201) ([bastelfreak](https://github.com/bastelfreak))
 - there is no zabbix proxy package in zbx-3.0 [\#198](https://github.com/voxpupuli/puppet-zabbix/pull/198) ([BcTpe4HbIu](https://github.com/BcTpe4HbIu))
 - Zabbix as default vhost \#180 [\#197](https://github.com/voxpupuli/puppet-zabbix/pull/197) ([szemlyanoy](https://github.com/szemlyanoy))
+- Add Zabbix sender support [\#195](https://github.com/voxpupuli/puppet-zabbix/pull/195) ([vide](https://github.com/vide))
+- fix wrong comment for configfrequency [\#192](https://github.com/voxpupuli/puppet-zabbix/pull/192) ([BcTpe4HbIu](https://github.com/BcTpe4HbIu))
 - Feature selinux [\#191](https://github.com/voxpupuli/puppet-zabbix/pull/191) ([bastelfreak](https://github.com/bastelfreak))
+- Fix for proxy sqlite support [\#189](https://github.com/voxpupuli/puppet-zabbix/pull/189) ([BcTpe4HbIu](https://github.com/BcTpe4HbIu))
+- updated to include Amazon Linux [\#188](https://github.com/voxpupuli/puppet-zabbix/pull/188) ([ericsysmin](https://github.com/ericsysmin))
 
 ## [2.2.0](https://github.com/voxpupuli/puppet-zabbix/tree/2.2.0) (2016-03-06)
 
@@ -732,7 +790,7 @@ These should not affect the functionality of the module.
 **Merged pull requests:**
 
 - Generalise the zabbix\_url [\#129](https://github.com/voxpupuli/puppet-zabbix/pull/129) ([eliranbz](https://github.com/eliranbz))
-- Added supporting new Zabbix params [\#128](https://github.com/voxpupuli/puppet-zabbix/pull/128) ([akostetskiy](https://github.com/akostetskiy))
+- Added supporting new Zabbix params [\#128](https://github.com/voxpupuli/puppet-zabbix/pull/128) ([akostetsky](https://github.com/akostetsky))
 - refactoring of repo.pp [\#126](https://github.com/voxpupuli/puppet-zabbix/pull/126) ([bastelfreak](https://github.com/bastelfreak))
 - Fping wrong path in debian [\#124](https://github.com/voxpupuli/puppet-zabbix/pull/124) ([Oyabi](https://github.com/Oyabi))
 - add support for CloudLinux [\#122](https://github.com/voxpupuli/puppet-zabbix/pull/122) ([bastelfreak](https://github.com/bastelfreak))
